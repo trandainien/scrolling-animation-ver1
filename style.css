@@ -1,0 +1,55 @@
+.container {
+  padding: 2em 4em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3em;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 8px 8px 5px;
+  transition: 1s ease;
+  width: 100%;
+
+  /* change */
+  max-height: 400px;
+}
+
+.card.open {
+  max-height: 700px;
+}
+
+.card .header > img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.body {
+  margin: 0 2em;
+}
+
+.body > h1 {
+  margin-bottom: 0;
+}
+
+.body > p {
+  margin-top: 0;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
